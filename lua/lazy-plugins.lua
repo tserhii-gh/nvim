@@ -29,6 +29,8 @@ require('lazy').setup({
 
   require 'plugins/indent_line',
 
+  require 'plugins/lint',
+
   require 'plugins/treesitter',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
