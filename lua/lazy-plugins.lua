@@ -1,35 +1,33 @@
 -- [[ Configure and install plugins ]]
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  { 'numToStr/Comment.nvim', opts = {} },
+  -- { 'numToStr/Comment.nvim', opts = {} },
 
-  require 'plugins/gitsigns',
+  -- require 'plugins/gitsigns',
 
-  require 'plugins/which-key',
+  -- require 'plugins/which-key',
 
   require 'plugins/telescope',
 
-  require 'plugins/lspconfig',
+  -- require 'plugins/lspconfig',
 
-  require 'plugins/conform',
+  -- require 'plugins/conform',
 
-  require 'plugins/cmp',
+  -- require 'plugins/cmp',
 
   require 'plugins/gruvbox',
 
-  require 'plugins/autopairs',
-
-  require 'plugins/conform',
+  -- require 'plugins/autopairs',
 
   -- require 'kickstart/plugins/todo-comments',
 
-  require 'plugins/mini',
+  -- require 'plugins/mini',
 
   require 'plugins/neo-tree',
 
   require 'plugins/indent_line',
 
-  require 'plugins/lint',
+  -- require 'plugins/lint',
 
   require 'plugins/treesitter',
 

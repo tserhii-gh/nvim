@@ -158,20 +158,23 @@ return {
       local servers = {
         clangd = {},
         -- gopls = {},
+        html = {},
+        -- emmet_language_server = {},
+        emmet_ls = {},
         -- pyright = {},
         pylsp = {
           plugins = {
-            ruff = { enabled = true },
+            ruff = { enabled = false },
             -- formatter options
-            black = { enabled = false },
+            black = { enabled = true },
             autopep8 = { enabled = false },
             yapf = { enabled = false },
             -- linter options
-            pylint = { enabled = false, executable = 'pylint' },
+            pylint = { enabled = true, executable = 'pylint' },
             pyflakes = { enabled = false },
             pycodestyle = { enabled = false },
             -- type checker
-            pylsp_mypy = { enabled = false, live_mode = true, report_progress = true },
+            pylsp_mypy = { enabled = true, live_mode = true, report_progress = true },
             -- auto-completion options
             jedi_completion = { fuzzy = true },
             -- import sorting

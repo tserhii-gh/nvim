@@ -20,6 +20,18 @@ return {
           ['\\'] = 'close_window',
         },
       },
+      filtered_items = {
+        -- visible = true,
+        show_hidden_count = false,
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+          '.git',
+          '.DS_Store',
+          'thumbs.db',
+          'node_modules',
+        },
+      },
     },
   },
 }
