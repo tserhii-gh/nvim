@@ -5,7 +5,7 @@ require('lazy').setup({
 
   require 'plugins/gitsigns',
 
-  require 'plugins/lightline',
+  require 'plugins/lualine',
 
   require 'plugins/which-key',
 
