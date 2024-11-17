@@ -27,6 +27,8 @@ require('lazy').setup({
 
   require 'plugins/neo-tree',
 
+  require 'plugins/rustacean',
+
   require 'plugins/indent_line',
 
   -- require 'plugins/lint',
