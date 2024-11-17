@@ -185,7 +185,28 @@ return {
             pyls_isort = { enabled = true },
           },
         },
-        -- rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              check = {
+                command = 'clippy',
+              },
+              cargo = {
+                allFeatures = true,
+              },
+              imports = {
+                group = {
+                  enable = false,
+                },
+              },
+              completion = {
+                postfix = {
+                  enable = false,
+                },
+              },
+            },
+          },
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
