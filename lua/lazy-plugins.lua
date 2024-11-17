@@ -7,6 +7,12 @@ require('lazy').setup({
 
   require 'plugins/lualine',
 
+  require 'plugins/fugitive',
+
+  -- require 'plugins.trouble',
+
+  require 'plugins.undotree',
+
   require 'plugins/which-key',
 
   require 'plugins/telescope',
@@ -27,7 +33,7 @@ require('lazy').setup({
 
   require 'plugins/neo-tree',
 
-  require 'plugins/rustacean',
+  -- require 'plugins/rustacean',
 
   require 'plugins/indent_line',
 

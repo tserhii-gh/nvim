@@ -3,6 +3,7 @@
 --  For more options, you can see `:help option-list`
 
 -- Make line numbers default
+vim.opt.relativenumber = true
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 -- vim.opt.relativenumber = true
@@ -29,7 +30,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'number'
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -57,16 +58,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- local signs = {
---   Error = '',
---   Warning = '',
---   Hint = '󰌵',
---   Information = ' ',
--- }
---
--- for type, icon in pairs(signs) do
---   local hl = 'DiagnosticSign' .. type
---   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
--- end
+local signs = {
+  Error = '',
+  Warning = '',
+  Hint = '󰌵',
+  Information = ' ',
+}
+
+for type, icon in pairs(signs) do
+  local hl = 'DiagnosticSign' .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 -- vim: ts=2 sts=2 sw=2 et
