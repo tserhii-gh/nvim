@@ -168,13 +168,13 @@ return {
         -- pyright = {},
         pylsp = {
           plugins = {
-            ruff = { enabled = false },
+            ruff = { enabled = true },
             -- formatter options
             black = { enabled = true },
             autopep8 = { enabled = false },
             yapf = { enabled = false },
             -- linter options
-            pylint = { enabled = true, executable = 'pylint' },
+            pylint = { enabled = false },
             pyflakes = { enabled = false },
             pycodestyle = { enabled = false },
             -- type checker

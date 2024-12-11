@@ -12,7 +12,7 @@ return {
         change = { text = '~' }, --'󰜥' },
         delete = { text = '_' },
         topdelete = { text = '‾' },
-        changedelete = { text = '󰜥' },
+        changedelete = { text = '~' },
       },
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
