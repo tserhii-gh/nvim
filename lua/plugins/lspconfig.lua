@@ -16,7 +16,7 @@ return {
       { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
-      vim.lsp.set_log_level 'debug'
+      vim.lsp.log.set_level 'ERROR'
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -159,7 +159,18 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = {},
+        clangd = {
+          cmd = {
+            'clangd',
+            '--background-index',
+            '--clang-tidy',
+            -- '--completion-style=detailed',
+            -- '--header-insertion=iwyu',
+          },
+          init_options = {
+            fallbackFlags = { '-std=c++20' },
+          },
+        },
         cmake = {},
         -- gopls = {},
         -- html = {},

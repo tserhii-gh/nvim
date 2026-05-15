@@ -1,6 +1,6 @@
 -- [[ Configure and install plugins ]]
 require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   -- { 'numToStr/Comment.nvim', opts = {} },
 
   require 'plugins.gitsigns',
@@ -13,7 +13,7 @@ require('lazy').setup({
 
   -- require 'plugins.debug',
 
-  require 'plugins.undotree',
+  -- require 'plugins.undotree',
 
   require 'plugins.comment',
 
@@ -31,7 +31,7 @@ require('lazy').setup({
 
   require 'plugins.autopairs',
 
-  require 'plugins.todo-comments',
+  -- require 'plugins.todo-comments',
 
   -- require 'plugins.mini',
 
@@ -41,7 +41,7 @@ require('lazy').setup({
 
   require 'plugins.indent_line',
 
-  -- require 'plugins.lint',
+  require 'plugins.lint',
 
   require 'plugins.treesitter',
 
