@@ -5,6 +5,7 @@
 -- Make line numbers default
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.signcolumn = 'yes'
 -- You can also add relative line numbers, to help with jumping.
 -- vim.opt.relativenumber = true
 
@@ -30,7 +31,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'number'
+-- vim.opt.signcolumn = 'number'
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -69,5 +70,12 @@ vim.opt.scrolloff = 10
 --   local hl = 'DiagnosticSign' .. type
 --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 -- end
+vim.diagnostic.config {
+  virtual_text = true, -- Show inline text for diagnostics
+  signs = false, -- Enable signs in the signcolumn
+  update_in_insert = false, -- Don't update diagnostics while typing
+  underline = true, -- Underline lines with errors
+  severity_sort = true, -- Prioritize errors in the signcolumn
+}
 
 -- vim: ts=2 sts=2 sw=2 et

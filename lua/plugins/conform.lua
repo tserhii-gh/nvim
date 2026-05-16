@@ -44,7 +44,7 @@ return {
       },
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- h = { 'clang-format' },
+        h = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         c = { 'clang-format' },
