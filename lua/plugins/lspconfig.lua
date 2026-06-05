@@ -139,9 +139,9 @@ return {
             -- '--completion-style=detailed',
             -- '--header-insertion=iwyu',
           },
-          init_options = {
-            fallbackFlags = { '-std=c++20' },
-          },
+          -- init_options = {
+          --   fallbackFlags = { '-std=c++20' },
+          -- },
         },
         cmake = {},
         -- gopls = {},
@@ -149,25 +149,35 @@ return {
         -- emmet_language_server = {},
         -- emmet_ls = {},
         -- pyright = {},
-        pylsp = {
-          plugins = {
-            ruff = { enabled = true },
-            -- formatter options
-            black = { enabled = true },
-            autopep8 = { enabled = false },
-            yapf = { enabled = false },
-            -- linter options
-            pylint = { enabled = false },
-            pyflakes = { enabled = false },
-            pycodestyle = { enabled = false },
-            -- type checker
-            pylsp_mypy = { enabled = true, live_mode = true, report_progress = true },
-            -- auto-completion options
-            jedi_completion = { fuzzy = true },
-            -- import sorting
-            pyls_isort = { enabled = true },
+        -- ty = { capabilities = capabilities },
+        basedpyright = {
+          analysis = {
+            diagnosticMode = 'openFilesOnly',
+            inlayHints = {
+              callArgumentNames = true,
+            },
           },
         },
+        ruff = {},
+        -- pylsp = {
+        -- plugins = {
+        -- ruff = { enabled = true },
+        -- formatter options
+        -- black = { enabled = true },
+        -- autopep8 = { enabled = false },
+        -- yapf = { enabled = false },
+        -- linter options
+        -- pylint = { enabled = false },
+        -- pyflakes = { enabled = false },
+        -- pycodestyle = { enabled = false },
+        -- type checker
+        -- pylsp_mypy = { enabled = true, live_mode = true, report_progress = true },
+        -- auto-completion options
+        -- jedi_completion = { fuzzy = true },
+        -- import sorting
+        -- pyls_isort = { enabled = true },
+        -- },
+        -- },
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {

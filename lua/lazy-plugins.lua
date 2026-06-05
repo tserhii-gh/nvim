@@ -15,7 +15,7 @@ require('lazy').setup({
 
   -- require 'plugins.undotree',
 
-  require 'plugins.comment',
+  -- require 'plugins.comment',
 
   require 'plugins.which-key',
 

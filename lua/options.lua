@@ -6,8 +6,25 @@
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.signcolumn = 'yes'
+-- vim.opt.foldmethod = 'syntax'
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 -- You can also add relative line numbers, to help with jumping.
 -- vim.opt.relativenumber = true
+
+-- Convert tabs to spaces
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+
+-- Number of spaces that a <Tab> in the file counts for
+vim.opt.tabstop = 4
+
+-- Number of spaces to use for each step of (auto)indent
+vim.opt.shiftwidth = 4
+
+-- Number of spaces that a <Tab> counts for while performing editing operations
+vim.opt.softtabstop = 4
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -77,5 +94,15 @@ vim.diagnostic.config {
   underline = true, -- Underline lines with errors
   severity_sort = true, -- Prioritize errors in the signcolumn
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'c', 'cpp' },
+  callback = function()
+    vim.opt_local.expandtab = true
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+  end,
+})
 
 -- vim: ts=2 sts=2 sw=2 et

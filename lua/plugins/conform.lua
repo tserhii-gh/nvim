@@ -25,22 +25,22 @@ return {
         }
       end,
       formatters = {
-        cmake_format = {
-          -- Change where to find the command
-          command = '/home/tserhii/Projects/.env/venv/bin/cmake-format',
-          -- Adds environment args to the yamlfix formatter
-          env = {
-            VIRTUAL_ENV = '/home/tserhii/Projects/.env/venv',
-          },
-        },
-        gersemi = {
-          -- Change where to find the command
-          command = '/home/tserhii/Projects/.env/venv/bin/gersemi',
-          -- Adds environment args to the yamlfix formatter
-          env = {
-            VIRTUAL_ENV = '/home/tserhii/Projects/.env/venv',
-          },
-        },
+        -- cmake_format = {
+        --   -- Change where to find the command
+        --   command = '/home/tserhii/Projects/.env/venv/bin/cmake-format',
+        --   -- Adds environment args to the yamlfix formatter
+        --   env = {
+        --     VIRTUAL_ENV = '/home/tserhii/Projects/.env/venv',
+        --   },
+        -- },
+        -- gersemi = {
+        --   -- Change where to find the command
+        --   command = '/home/tserhii/Projects/.env/venv/bin/gersemi',
+        --   -- Adds environment args to the yamlfix formatter
+        --   env = {
+        --     VIRTUAL_ENV = '/home/tserhii/Projects/.env/venv',
+        --   },
+        -- },
       },
       formatters_by_ft = {
         lua = { 'stylua' },
@@ -49,7 +49,7 @@ return {
         -- python = { "isort", "black" },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
-        cmake = { 'gersemi' },
+        -- cmake = { 'gersemi' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
