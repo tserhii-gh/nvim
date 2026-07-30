@@ -143,7 +143,7 @@ return {
           --   fallbackFlags = { '-std=c++20' },
           -- },
         },
-        cmake = {},
+        -- cmake = {},
         -- gopls = {},
         -- html = {},
         -- emmet_language_server = {},
