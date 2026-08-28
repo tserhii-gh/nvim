@@ -24,7 +24,7 @@ return {
         -- visible = true,
         show_hidden_count = false,
         hide_dotfiles = false,
-        hide_gitignored = true,
+        hide_gitignored = false,
         hide_by_name = {
           '.git',
           '.DS_Store',

@@ -143,13 +143,10 @@ return {
           --   fallbackFlags = { '-std=c++20' },
           -- },
         },
-        -- cmake = {},
         -- gopls = {},
         -- html = {},
         -- emmet_language_server = {},
         -- emmet_ls = {},
-        -- pyright = {},
-        -- ty = { capabilities = capabilities },
         basedpyright = {
           analysis = {
             diagnosticMode = 'openFilesOnly',
@@ -159,47 +156,32 @@ return {
           },
         },
         ruff = {},
-        -- pylsp = {
-        -- plugins = {
-        -- ruff = { enabled = true },
-        -- formatter options
-        -- black = { enabled = true },
-        -- autopep8 = { enabled = false },
-        -- yapf = { enabled = false },
-        -- linter options
-        -- pylint = { enabled = false },
-        -- pyflakes = { enabled = false },
-        -- pycodestyle = { enabled = false },
-        -- type checker
-        -- pylsp_mypy = { enabled = true, live_mode = true, report_progress = true },
-        -- auto-completion options
-        -- jedi_completion = { fuzzy = true },
-        -- import sorting
-        -- pyls_isort = { enabled = true },
-        -- },
-        -- },
-        -- rust_analyzer = {
-        --   settings = {
-        --     ['rust-analyzer'] = {
-        --       check = {
-        --         command = 'clippy',
-        --       },
-        --       cargo = {
-        --         allFeatures = true,
-        --       },
-        --       imports = {
-        --         group = {
-        --           enable = false,
-        --         },
-        --       },
-        --       completion = {
-        --         postfix = {
-        --           enable = false,
-        --         },
-        --       },
-        --     },
-        --   },
-        -- },
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              files = {
+                -- Exclude the target directory from indexing
+                excludeDirs = { 'target', '.git', '.cargo' },
+              },
+              check = {
+                command = 'clippy',
+              },
+              cargo = {
+                allFeatures = true,
+              },
+              imports = {
+                group = {
+                  enable = false,
+                },
+              },
+              completion = {
+                postfix = {
+                  enable = false,
+                },
+              },
+            },
+          },
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -257,7 +239,7 @@ return {
 
       for name, server in pairs(servers) do
         vim.lsp.config(name, server)
-        vim.lsp.enable(name)
+        -- vim.lsp.enable(name)
       end
     end,
   },
